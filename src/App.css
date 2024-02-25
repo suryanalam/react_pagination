@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header{
+  width: 100dvw;
+  max-width: 100%;
+  padding: 1rem 0;
+  font-size: 2vw;
+  text-align: center;
+  background-color: goldenrod;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.products-div{
+  padding: 1rem;
+  width: 95dvw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.product-bg{
+  padding: 1rem;
+  background-color: aliceblue;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+img{
+  width: 200px;
+  height: 150px;
+  object-fit:fill;
+}
+
+.pagination-div{
+  margin:2rem auto;
+  width: 95dvw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+}
+
+:is(.next,.prev),.selected{
+  background-color:darkgoldenrod;
+}
+
+.pagination-div>span{
+  font-weight: 600;
+  font-size: 1vw;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
